@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Basic JavaScript Application</title>
+        <link href="./styles/style.css" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="box" id="header">Subpage 2 - Basic JavaScript Application</div>
+            <div class="box" id="nav">
+                <a id="navbox" href="index.html">Homepage</a>
+                <a id="navbox" href="portfolio.html">Project Portfolio</a>
+            </div>
+            <div id="leftbar"></div>
+            <div id="rightbar"></div>
+            <div id="content">
+                <p>Random fruit picker<br>
+                    My favorite fruit is <span id="fruitName">a placeholder fruit</span>. The random number is <span id="randNumber">#</span>.
+                </p>
+            </div>
+            <div class="box" id="footer">Website made as a Web Development Project</div>
+        </div>
+        <script>
+            let fruits = ["an apple", "a banana", "an orange", "a blueberry"];
+            let randNum = Math.floor(Math.random() * 100);
+
+            document.getElementById("fruitName").innerHTML = fruits[randNum % fruits.length];
+            document.getElementById("randNumber").innerHTML = randNum;
+        </script>
+    </body>
+</html>

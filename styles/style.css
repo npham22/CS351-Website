@@ -1,0 +1,69 @@
+/* Sizing for mobile devices */
+.container {
+        display: grid;
+        width: 100%;
+        margin: auto;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 100px 50px auto 50px;
+        grid-gap: 0px;
+        grid-template-areas:
+        "hd hd hd"
+        "nv nv nv"
+        "lb ct rb"
+        "ft ft ft";
+        justify-content: center;
+    }
+/* Sizing for large-screen devices */
+@Media(min-width: 700px) {
+    .container {
+        display: grid;
+        width: 100%;
+        margin: auto;
+        grid-template-columns: 150px 400px 150px;
+        grid-template-rows: 100px 50px auto 50px;
+        grid-gap: 0px;
+        grid-template-areas:
+        "hd hd hd"
+        "nv nv nv"
+        "lb ct rb"
+        "ft ft ft";
+        justify-content: center;
+    }
+}
+.box {
+    display: flex;
+    justify-content: left;
+    border: 1px solid red;
+}
+#navbox {
+    width: 150px;
+}
+#header {
+    align-items: center;
+    padding-left: 10px;
+    grid-area: hd;
+}
+#nav {
+    align-items: center;
+    justify-content: left;
+    padding-left: 10px;
+    padding-right: 100px;
+    grid-area: nv;
+}
+#leftbar {
+    grid-area: lb;
+}
+#rightbar {
+    grid-area: rb;
+}
+#content {
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-area: ct;
+    line-height: 1.7;
+}
+#footer {
+    padding-left: 10px;
+    align-items: center;
+    grid-area: ft;
+}
